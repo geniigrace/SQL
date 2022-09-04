@@ -20,4 +20,10 @@ SELECT * FROM member;
 
 UPDATE member
 SET height = height/100;
-SELECT * FROM member;
+SELECT * FROM member; 
+
+CREATE TABLE big_tagle1 (SELECT * FROM market_db.member);
+
+SELECT mem_id, amount FROM buy ORDER BY mem_id;
+
+SELECT mem_id, SUM(amount) FROM buy GROUP BY mem_id;
