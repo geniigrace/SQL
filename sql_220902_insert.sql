@@ -39,3 +39,4 @@ SELECT last_INSERT_ID();
  insert into hongong3 values(null, '이름1', 10),(null, '이름2', 20), (null, '이름3', 30); -- 데이터 한줄로 입력하기 
  select * from hongong3;
  
+select @@auto_increment_increment;
