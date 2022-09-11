@@ -1,12 +1,10 @@
 -- 동적 SQL
-
 USE market_db;
 PREPARE myQuery FROM 'SELECT * FROM member WHERE mem_id="BLK"';
 EXECUTE myQuery;
 deallocate prepare myQuery;
 
 -- 동적 SQL 활용
-
 DROP TABLE IF EXISTS gate_table;
 CREATE TABLE gate_table ( id INT auto_increment primary KEY, entry_time DATETIME);
 
