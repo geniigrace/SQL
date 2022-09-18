@@ -101,3 +101,16 @@ delimiter ;
 call while_proc();
 
 -- 동적 sql 사용
+drop procedure if exists dynamic_proc;
+delimiter $$
+create procedure dynamic_proc(
+in tableName varchar(20))
+begin
+set @sqlQuery =concat('select * from ',tableName);
+prepare myQuery from @sqlQuery;
+execute myQuery;
+deallocate prepare myQuery;
+end $$
+delimiter ;
+call dynamic_proc('member');
+call dynamic_proc('buy');
