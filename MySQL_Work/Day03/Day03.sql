@@ -190,3 +190,9 @@ delete from testTBL4 where Fname = 'Aamer' limit 5;
 
 -- Q2. 모두 지우기
 delete from testTBL4 where Fname = 'Aamer';
+
+use sqldb;
+create table memberTBL (select userID, userName, addr from userTBL limit 3);
+alter table memberTBL
+add constraint pk_memberTLB primary key (userID); -- PK를 지정
+select * from memberTBL ;
