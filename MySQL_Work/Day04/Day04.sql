@@ -219,8 +219,8 @@ use sqldb;
 select *
 from buyTBL 
 inner join userTBL 
-on buyTBL.userID=userTBL.userID
-where buyTBL.userID = 'JYP';
+on buyTBL.userID=userTBL.userID;
+-- where buyTBL.userID = 'JYP';
 
 select *
 from buyTBL
