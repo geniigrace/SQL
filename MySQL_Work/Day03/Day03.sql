@@ -83,8 +83,8 @@ select count(mobile1) '휴대폰이 있는 사용자' from userTBL;
 -- Q9
 select userID '사용자', sum(price*amount) '총구매액' 
 from buyTBL 
-group by userID 
-having sum(price*amount)>1000;
+group by userID ;
+-- having sum(price*amount)>1000;
 
 /* 
 DML : CRUD
